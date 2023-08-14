@@ -140,6 +140,7 @@ public class ListaTarefas {
 
         // Implementação BinarySearch, com complexidade O(log₂n);
         for (Tarefa tarefa : tarefas) {
+            boolean added = false;
             int inicio = 0;
             int fim = listaTarefas.size() - 1;
             int meio;
@@ -158,11 +159,12 @@ public class ListaTarefas {
                     inicio = meio + 1;
                 } else if (tarefa.equals(listaTarefas.get(meio))) {
                     indexes.add(meio);
+                    added = true;
                     break;
                 }
             }
 
-            indexes.add(-1);
+            if (!added) indexes.add(-1);
         }
 
         return indexes.toArray(new Integer[0]);

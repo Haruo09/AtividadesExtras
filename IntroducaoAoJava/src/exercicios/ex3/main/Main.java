@@ -49,6 +49,15 @@ public class Main {
         index = lista.search(new Tarefa("a", "b", "não concluída"));
         System.out.println(index);
 
+        // Buscando várias tarefas:
+        Integer[] indexes = lista.search(
+            new Tarefa("a", "b", "não concluída"),
+            trabFisica,
+            p2LabDeProgramacao
+        );
+        for (int i : indexes) System.out.print(i + " ");
+        System.out.println(" ");
+
         // Removendo uma tarefa:
         lista.pop(p2LabDeProgramacao);
         System.out.println(lista.getListaTarefas());
