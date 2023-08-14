@@ -6,10 +6,23 @@ public class Tarefa {
     private String descricao;
     private String status;
 
-    // Construtor:
-    public Tarefa(String descricao, String status) {
+    public Tarefa(String nome, String descricao, String status) {
+        this.nome = nome;
         this.descricao = descricao;
         this.status = status;
+    }
+
+    // Método toString():
+    public String toString() {
+        return String.format(
+            """
+            
+            Nome: %s
+            Descrição: %s
+            Status: %s
+            """,
+            this.nome, this.descricao, this.status
+        );
     }
 
     // Getters & Setters:
