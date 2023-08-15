@@ -22,10 +22,17 @@ public class Main {
         System.out.println(banco.getContas());
 
         // Tentando adicionar uma conta já existente:
-        banco.add(contaHaruo);
+        banco.add(contaHaruo);  // erro: conta já cadastrada;
 
         // Buscando as contas:
-        banco.search(contaHaruo, contaAlex, new ContaBancaria("X", 999_999_999));
+        for (
+            int i : banco.search(
+                contaHaruo,
+                contaAlex,
+                new ContaBancaria("X", 999_999_999)
+            )
+        ) System.out.print(i + " ");  // imprimindo o índice das contas;
+        System.out.println(" ");
 
         // Tentando remover uma conta inexistente:
         banco.pop(new ContaBancaria("Mark", 1_000_000_000));
