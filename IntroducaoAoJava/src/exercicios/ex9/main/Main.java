@@ -14,7 +14,7 @@ public class Main {
 
         // Instanciando os compromissos:
         Compromisso listaExtra = new Compromisso(
-            LocalDate.of(2023, 8, 30),
+            LocalDate.of(2023, 8, 16),
             LocalTime.of(23, 59, 59),
             "Entrega da Lista Extra do prof Alexandre"
         );
@@ -32,6 +32,17 @@ public class Main {
         agenda.agendar(listaExtra, expFisica);
 
         // Listando os compromissos:
+        agenda.listar();
+
+        // Editando um compromisso:
+        agenda.editar(
+            listaExtra,
+            LocalDate.of(2023, 8, 30),
+            listaExtra.getHorario(),
+            listaExtra.getDescricao()
+        );
+
+        // Verificando a alteração da data:
         agenda.listar();
     }
 }
