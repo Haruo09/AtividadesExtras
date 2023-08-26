@@ -5,7 +5,7 @@ import java.util.List;
 
 public class ListaTarefas {
     // Atributos:
-    List<Tarefa> listaTarefas = new ArrayList<>();
+    private List<Tarefa> listaTarefas = new ArrayList<>();
 
     // Construtor:
     public ListaTarefas(List<Tarefa> listaTarefas) {
@@ -55,6 +55,7 @@ public class ListaTarefas {
                             break insertionLoop;
                         }
                     }
+
                 } catch (IndexOutOfBoundsException exception) {
                     // catch para não estourar um erro.
                 } finally {

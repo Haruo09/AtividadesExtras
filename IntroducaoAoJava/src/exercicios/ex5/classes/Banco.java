@@ -9,7 +9,7 @@ public class Banco {
     /*
     * Por questões de "preciso terminar logo este trabalho",
     * os algoritmos utilizados nesta classe serão mais simples
-    * do que os utilizados nos exercícios 4 e 5.
+    * do que os utilizados nos exercícios 3 e 4.
     * */
 
     public void add(ContaBancaria... contas) {
