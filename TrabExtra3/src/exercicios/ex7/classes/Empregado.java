@@ -19,7 +19,6 @@ public class Empregado {
         // A cada ano após o Ano de Contratação, o salário aumentará 5%.
         // Poderia fazer algo mais complexo, envolvendo meses e dias, mas não se vê necessário aqui.
         int diff = Math.abs(LocalDate.now().getYear() - this.dataContratacao.getYear());
-        System.out.println(diff);
         this.salario += this.salario * diff/20.;
     }
 
